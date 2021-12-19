@@ -6,6 +6,7 @@
 
 class QLineEdit;
 class QLabel;
+class QComboBox;
 
 class MainWindow : public QWidget {
   Q_OBJECT
@@ -18,6 +19,7 @@ class MainWindow : public QWidget {
     QLineEdit* m_hrs;
     QLineEdit* m_min;
     QLabel* m_randomLabel;
+    QComboBox* m_ringtones;
 };
 
 #endif // __MAINWINDOW_H__
