@@ -1,0 +1,5 @@
+*.o
+Gugah
+.qmake*
+moc_*
+Makefile
