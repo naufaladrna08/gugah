@@ -14,7 +14,6 @@ AboutWindow::AboutWindow(QWidget* parent)
   QHBoxLayout *hlayout1 = new QHBoxLayout;
 
   hlayout0->addWidget(m_title, Qt::AlignCenter);
-  // hlayout0->setContentsMargins(16, 16, 16, 16);
   hlayout1->addWidget(m_description, Qt::AlignCenter);
 
   vlayout->addLayout(hlayout0);
@@ -23,5 +22,6 @@ AboutWindow::AboutWindow(QWidget* parent)
 }
 
 AboutWindow::~AboutWindow() {
-
+  delete m_title; 
+  delete m_description; 
 }
