@@ -78,5 +78,6 @@ void MainWindow::about() {
 }
 
 void MainWindow::aboutQt() {
-  
+  mw_aboutqt = new AboutQtWindow;
+  mw_aboutqt->show();
 }
