@@ -73,7 +73,10 @@ void MainWindow::exit() {
 }
 
 void MainWindow::about() {
+  mw_about = new AboutWindow;
+  mw_about->show();
 
+  qInfo("About");
 }
 
 void MainWindow::aboutQt() {

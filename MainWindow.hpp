@@ -3,6 +3,7 @@
 
 #include <QtWidgets/QWidget>
 #include <QtWidgets/QtWidgets>
+#include "AboutWindow.hpp"
 
 class QLineEdit;
 class QLabel;
@@ -40,6 +41,8 @@ class MainWindow : public QWidget {
     QAction* m_aboutAct;
     QAction* m_aboutQtAct;
     QLabel* m_infoLabel;
+
+    AboutWindow* mw_about;
 };
 
 #endif // __MAINWINDOW_H__
