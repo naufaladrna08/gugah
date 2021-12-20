@@ -4,8 +4,15 @@
 #include <QtWidgets/QWidget>
 #include <QtWidgets/QtWidgets>
 
+class QLabel;
+class QTextBrowser;
+
 class AboutWindow : public QWidget  {
   Q_OBJECT
+
+  private:
+    QLabel* m_title;
+    QTextBrowser* m_description;
 
   public:
     explicit AboutWindow(QWidget* parent = 0);
