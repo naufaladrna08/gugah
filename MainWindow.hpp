@@ -6,12 +6,15 @@
 #include "AboutWindow.hpp"
 #include "AboutQtWindow.hpp"
 
+#define LOG qInfo()
+
 class QLineEdit;
 class QLabel;
 class QComboBox;
 class QMenu;
 class QAction;
 class QMenuBar;
+class QPushButton;
 
 class MainWindow : public QWidget {
   Q_OBJECT
@@ -24,16 +27,18 @@ class MainWindow : public QWidget {
     void exit();
     void about();
     void aboutQt();
+    void ringtoneChanged(int index);
 
   private:
-    QLineEdit* m_hrs;
-    QLineEdit* m_min;
-    QLabel* m_randomLabel;
-    QComboBox* m_ringtones;
-
     /* Context menu stuff */
     void createActions();
     void createMenus();
+
+    QLineEdit* m_hrs;
+    QLineEdit* m_min;
+    QLineEdit* m_source;
+    QLabel* m_randomLabel;
+    QComboBox* m_ringtones;
 
     QMenuBar* m_menu;
     QMenu* m_fileMenu;
@@ -42,9 +47,12 @@ class MainWindow : public QWidget {
     QAction* m_aboutAct;
     QAction* m_aboutQtAct;
     QLabel* m_infoLabel;
+    QPushButton* m_openFile;
 
     AboutWindow* mw_about;
     AboutQtWindow* mw_aboutqt;
+
+    char* m_ringtone;
 };
 
 #endif // __MAINWINDOW_H__
