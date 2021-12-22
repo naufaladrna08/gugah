@@ -8,6 +8,7 @@ MainWindow::MainWindow(QWidget* parent)
   m_randomLabel = new QLabel(":");
   m_ringtones = new QComboBox();
   m_openFile = new QPushButton("Open");
+  m_start = new QPushButton("Start Alarm");
 
   m_ringtones->addItem("Bell #1");
   m_ringtones->addItem("Bell #2");
@@ -26,6 +27,7 @@ MainWindow::MainWindow(QWidget* parent)
   QHBoxLayout* hlayout1 = new QHBoxLayout();
   QHBoxLayout* hlayout2 = new QHBoxLayout();
   QHBoxLayout* hlayout3 = new QHBoxLayout();
+  QHBoxLayout* hlayout4 = new QHBoxLayout();
   QVBoxLayout* vlayout = new QVBoxLayout();
 
   hlayout1->setContentsMargins(0, 26, 0, 0);
@@ -35,11 +37,13 @@ MainWindow::MainWindow(QWidget* parent)
   hlayout2->addWidget(m_ringtones);
   hlayout3->addWidget(m_source);
   hlayout3->addWidget(m_openFile);
+  hlayout4->addWidget(m_start);
 
   vlayout->addLayout(hlayout1);
   vlayout->addLayout(hlayout2);
   vlayout->setContentsMargins(8, 8, 8, 8);
   vlayout->addLayout(hlayout3);
+  vlayout->addLayout(hlayout4);
 
   setLayout(vlayout);
   createActions();

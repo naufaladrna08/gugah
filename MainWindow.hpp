@@ -39,6 +39,8 @@ class MainWindow : public QWidget {
     QLineEdit* m_source;
     QLabel* m_randomLabel;
     QComboBox* m_ringtones;
+    QPushButton* m_openFile;
+    QPushButton* m_start;
 
     QMenuBar* m_menu;
     QMenu* m_fileMenu;
@@ -47,7 +49,6 @@ class MainWindow : public QWidget {
     QAction* m_aboutAct;
     QAction* m_aboutQtAct;
     QLabel* m_infoLabel;
-    QPushButton* m_openFile;
 
     AboutWindow* mw_about;
     AboutQtWindow* mw_aboutqt;
