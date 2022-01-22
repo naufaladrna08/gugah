@@ -38,7 +38,7 @@ MainWindow::MainWindow(QWidget* parent)
   hlayout3->addWidget(m_source);
   hlayout3->addWidget(m_openFile);
   hlayout4->addWidget(m_start);
-
+  
   vlayout->addLayout(hlayout1);
   vlayout->addLayout(hlayout2);
   vlayout->setContentsMargins(8, 8, 8, 8);
